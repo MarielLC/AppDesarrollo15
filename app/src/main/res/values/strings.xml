@@ -1,0 +1,99 @@
+<resources>
+    <string name="app_name">AppDesarrollo</string>
+    <string name="txt_titulo">NombreAppYa</string>
+    <string name="txt_bienvenida">BIENVENIDO</string>
+    <string name="btn_ingreso">INGRESAR</string>
+    <string name="txt_areaOpciones">Elige la operación de tu preferencia de acuerdo a tus necesidades.</string>
+    <string name="toolbar_opciones">Opciones</string>
+    <string name="btn_op_1">Áreas y Perímetros</string>
+    <string name="btn_op_2">Volumen</string>
+    <string name="btn_op_3">Razones Trigonométricas</string>
+    <string name="btn_op_4">Promedio</string>
+    <string name="btn_op_5">Tutoriales</string>
+
+    <string name="btn_circulo">Círculo</string>
+    <string name="btn_cuadrado">Cuadrado</string>
+    <string name="btn_hexagono">Hexágono</string>
+    <string name="btn_pentagono">Pentágono</string>
+    <string name="btn_rectangulo">Rectángulo</string>
+    <string name="btn_trapecio">Trapecio</string>
+
+    <string name="txt_area">Área</string>
+    <string name="txt_perimetro">Perímetro</string>
+    <string name="txt_volumen">Volumen</string>
+    <string name="btn_calcular">Calcular</string>
+    <string name="btn_limpiar">Limpiar</string>
+
+
+    <string name="formula_area_cubo">A=6*l²</string>
+    <string name="formula_volumen_cubo">V=l³</string>
+    <string name="formula_area_cilindro">A=2πr(r+h)</string>
+    <string name="formula_volumen_cilindro">V=πr²h</string>
+    <string name="formula_area_esfera">A=4πr²</string>
+    <string name="formula_volumen_esfera">V=(4/3)πr³</string>
+    <string name="formula_area_piramide">A=l²+2lx</string>
+    <string name="formula_volumen_piramide">V=(1/3)l²h</string>
+    <string name="formula_area_cono">A=πr(r+a)</string>
+    <string name="formula_volumen_cono">V=(πhr²)/3</string>
+    <string name="formula_area_triangular">A=Pbase*h+2Abase</string>
+    <string name="formula_volumen_triangular">V=(area_base)h</string>
+
+    <string name="btn_cubo">Cubo</string>
+    <string name="btn_cilindro">Cilindro</string>
+    <string name="btn_prisma_triangular">Triangular</string>
+    <string name="btn_esfera">Esfera</string>
+    <string name="btn_piramide">Pirámide</string>
+    <string name="btn_cono">Cono</string>
+
+    <string name="tittle_razonesT">Razones Trigonométricas</string>
+    <string name="txt_formulas">Fórmulas</string>
+    <string name="txt_seno">Seno</string>
+    <string name="txt_coseno">Coseo</string>
+    <string name="txt_tangente">Tangente</string>
+    <string name="txt_cotangente">Cotangente</string>
+    <string name="txt_secante">Secante</string>
+    <string name="txt_cosecante">Cosecante</string>
+
+
+    //fórmulas- area y perimetros
+    <string name="formula_area_circulo">A=π*r²</string>
+    <string name="formula_area_cuadrado">A=l²</string>
+    <string name="formula_area_hexagono">A=6l*a/2</string>
+    <string name="formula_area_pentagono">A=5l*a/2</string>
+    <string name="formula_area_rectangulo">A=b*h</string>
+    <string name="formula_area_trapecio">A=(a+b)h/2</string>
+
+    <string name="formula_perimetro_circulo">P=2π*r</string>
+    <string name="formula_perimetro_cuadrado">P=4l</string>
+    <string name="formula_perimetro_hexagono">P=6l</string>
+    <string name="formula_perimetro_pentagono">P=5l</string>
+    <string name="formula_perimetro_rectangulo">P=2(b+h)</string>
+    <string name="formula_perimetro_trapecio">P=a+b+c+d</string>
+
+    //fórmulas- area y perimetros
+    <string name="formula_hipotenusa">h²= co²+ca²</string>
+    <string name="formula_seno">senoθ= co/h</string>
+    <string name="formula_coseno">cosθ= ca/h</string>
+    <string name="formula_tangente">tanθ= co/ca²</string>
+    <string name="formula_cotangente">cotθ=ca/co</string>
+    <string name="formula_secante">secθ= h/ca</string>
+    <string name="formula_cosecante">cscθ= h/co</string>
+
+    <string name="lado">Lado</string>
+    <string name="radio">Radio</string>
+    <string name="altura">Altura</string>
+    <string name="lado_a">Lado a</string>
+    <string name="lado_b">Lado b</string>
+    <string name="lado_c">Lado c</string>
+    <string name="lado_d">Lado d</string>
+    <string name="base">Base</string>
+
+    <string name="btn_login">Logearse</string>
+    <string name="btn_registrarse">Registrarse</string>
+    <string name="btn_crear_cuenta">Crear cuenta</string>
+    <string name="txt_nombres">Nombres</string>
+    <string name="txt_correo">Correo</string>
+    <string name="txt_contrasena">Contraseña</string>
+
+    <string name="btn_cerrar_session">cerrar session</string>
+</resources>

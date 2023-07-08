@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Activity_AreayPerimetro">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/color_primary"
+        android:minHeight="?attr/actionBarSize"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:title="@string/btn_op_1"/>
+
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar2">
+
+        <TableLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp">
+
+            <TableRow
+                android:layout_width="180dp"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="10dp"
+                android:gravity="center">
+
+                <Button
+                    android:id="@+id/btn_AP_circulo"
+                    android:layout_width="180dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="10dp"
+                    android:backgroundTint="@color/color_primary"
+                    android:fontFamily="casual"
+                    android:padding="10dp"
+                    android:text="@string/btn_circulo"
+                    android:textColor="@color/white"
+                    android:textStyle="bold"
+                    app:icon="@drawable/circulo"
+                    app:iconGravity="textTop"
+                    app:iconTint="@color/white" />
+
+                <Button
+                    android:id="@+id/btn_AP_cuadrado"
+                    style="?attr/materialButtonOutlinedStyle"
+                    android:layout_width="180dp"
+                    android:layout_height="match_parent"
+                    android:fontFamily="casual"
+                    android:padding="10dp"
+                    android:text="@string/btn_cuadrado"
+                    android:textColor="@color/color_primary"
+                    android:textStyle="bold"
+                    app:icon="@drawable/cuadrado"
+                    app:iconGravity="textTop"
+                    app:iconTint="@color/color_primary"
+                    app:strokeColor="@color/color_primary"
+                    app:strokeWidth="3dp" />
+
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="10dp"
+                android:gravity="center">
+
+                <Button
+                    android:id="@+id/btn_AP_hexagono"
+                    style="?attr/materialButtonOutlinedStyle"
+                    android:layout_width="180dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginRight="10dp"
+                    android:fontFamily="casual"
+                    android:padding="10dp"
+                    android:text="@string/btn_hexagono"
+                    android:textColor="@color/color_primary"
+                    android:textStyle="bold"
+                    app:icon="@drawable/hexagono"
+                    app:iconGravity="textTop"
+                    app:iconTint="@color/color_primary"
+                    app:strokeColor="@color/color_primary"
+                    app:strokeWidth="3dp" />
+
+                <Button
+                    android:id="@+id/btn_AP_pentagono"
+                    android:layout_width="180dp"
+                    android:layout_height="wrap_content"
+                    android:backgroundTint="@color/color_primary"
+                    android:fontFamily="casual"
+                    android:padding="10dp"
+                    android:text="@string/btn_pentagono"
+                    android:textColor="@color/white"
+                    android:textStyle="bold"
+                    app:icon="@drawable/pentagono"
+                    app:iconGravity="textTop"
+                    app:iconTint="@color/white" />
+
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center">
+
+                <Button
+                    android:id="@+id/btn_AP_rectangulo"
+                    android:layout_width="180dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="10dp"
+                    android:backgroundTint="@color/color_primary"
+                    android:fontFamily="casual"
+                    android:padding="10dp"
+                    android:text="@string/btn_rectangulo"
+                    android:textColor="@color/white"
+                    android:textStyle="bold"
+                    app:icon="@drawable/rectangulo"
+                    app:iconGravity="textTop"
+                    app:iconTint="@color/white" />
+
+                <Button
+                    android:id="@+id/btn_AP_trapecio"
+                    style="?attr/materialButtonOutlinedStyle"
+                    android:layout_width="180dp"
+                    android:layout_height="match_parent"
+                    android:fontFamily="casual"
+                    android:padding="10dp"
+                    android:text="@string/btn_trapecio"
+                    android:textColor="@color/color_primary"
+                    android:textStyle="bold"
+                    app:icon="@drawable/trapecio"
+                    app:iconGravity="textTop"
+                    app:iconTint="@color/color_primary"
+                    app:strokeColor="@color/color_primary"
+                    app:strokeWidth="3dp" />
+
+            </TableRow>
+
+        </TableLayout>
+
+        <View
+            android:id="@+id/view3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/wave"
+            android:rotationX="182" />
+
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
