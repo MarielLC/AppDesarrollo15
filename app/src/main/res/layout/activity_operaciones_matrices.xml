@@ -6,99 +6,231 @@
     android:layout_height="match_parent"
     tools:context=".operaciones_matrices">
 
-    <androidx.appcompat.widget.Toolbar
-        android:id="@+id/toolbar5"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:background="@color/color_primary"
-        android:minHeight="?attr/actionBarSize"
-        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:title="matrices"/>
-
-    <View
-        android:id="@+id/view6"
+    <TableLayout
         android:layout_width="0dp"
-        android:layout_height="52dp"
-        android:background="@drawable/wave"
-        android:rotationX="182"
+        android:layout_height="680dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toStartOf="parent" />
-
-    <FrameLayout
-        android:layout_width="357dp"
-        android:layout_height="364dp"
-        android:layout_marginTop="168dp"
-        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/toolbar5"
-        tools:visibility="invisible">
+        app:layout_constraintTop_toTopOf="parent">
 
-    </FrameLayout>
+        <TableRow
+            android:layout_width="283dp"
+            android:layout_height="235dp">
 
-    <Spinner
-        android:id="@+id/spinner2"
-        android:layout_width="141dp"
-        android:layout_height="34dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="4dp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView21" />
+            <LinearLayout
+                android:layout_width="148dp"
+                android:layout_height="182dp"
+                android:layout_gravity="center"
+                android:orientation="vertical">
 
-    <TextView
-        android:id="@+id/textView21"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="28dp"
-        android:layout_marginTop="20dp"
-        android:text="Eliga la operación"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/toolbar5" />
+                <TextView
+                    android:id="@+id/textView21"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Tipo Operación" />
 
-    <TextView
-        android:id="@+id/textView22"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
-        android:layout_marginEnd="60dp"
-        android:text="Tamano de la matriz"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/toolbar5" />
+                <Spinner
+                    android:id="@+id/spinner_matriz"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="30dp" />
 
-    <FrameLayout
-        android:layout_width="201dp"
-        android:layout_height="68dp"
-        android:layout_marginTop="4dp"
-        android:layout_marginEnd="20dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView22">
+                <Button
+                    android:id="@+id/btn_guardar_tamaño_matriz"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="save t" />
+            </LinearLayout>
 
-        <androidx.constraintlayout.widget.ConstraintLayout
-            android:layout_width="match_parent"
+            <LinearLayout
+                android:layout_width="170dp"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/textView23"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Tamaño de la Matriz" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/txt_texto_matrizA"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Matriz A" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <EditText
+                            android:id="@+id/matrizA_tamañoN"
+                            android:layout_width="30dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:ems="10"
+                            android:inputType="number" />
+
+                        <TextView
+                            android:id="@+id/textView26"
+                            android:layout_width="63dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:text="x" />
+
+                        <EditText
+                            android:id="@+id/matrizA_tamañoM"
+                            android:layout_width="30dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:ems="10"
+                            android:inputType="number" />
+                    </LinearLayout>
+
+                    <TextView
+                        android:id="@+id/txt_texto_matrizB"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Matriz B" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <EditText
+                            android:id="@+id/matrizB_tamañoN"
+                            android:layout_width="30dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:ems="10"
+                            android:inputType="number" />
+
+                        <TextView
+                            android:id="@+id/textView28"
+                            android:layout_width="63dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:text="x" />
+
+                        <EditText
+                            android:id="@+id/matrizB_tamañoM"
+                            android:layout_width="30dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:ems="10"
+                            android:inputType="number" />
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </TableRow>
+
+        <TableRow
+            android:layout_width="389dp"
             android:layout_height="match_parent">
 
-            <EditText
-                android:id="@+id/editTextNumber"
-                android:layout_width="63dp"
-                android:layout_height="27dp"
-                android:ems="10"
-                android:inputType="number"
-                tools:layout_editor_absoluteX="79dp"
-                tools:layout_editor_absoluteY="11dp" />
+            <LinearLayout
+                android:layout_width="389dp"
+                android:layout_height="match_parent"
+                android:layout_span="2"
+                android:orientation="horizontal">
 
-            <TextView
-                android:id="@+id/textView23"
+                <TextView
+                    android:id="@+id/txt_informacionMatriz"
+                    android:layout_width="144dp"
+                    android:layout_height="wrap_content"
+                    android:text="Digite el valor de Matriz A (i,j)" />
+
+                <EditText
+                    android:id="@+id/txt_datoM"
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:inputType="numberDecimal" />
+
+                <Button
+                    android:id="@+id/btn_guardar_datoM"
+                    android:layout_width="133dp"
+                    android:layout_height="match_parent"
+                    android:text="guardar" />
+            </LinearLayout>
+
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="366dp"
+            android:gravity="center">
+
+            <LinearLayout
+                android:layout_width="180dp"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/textView29"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="Resultados" />
+
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="202dp">
+
+                    <TextView
+                        android:id="@+id/txt_matrizA_completo"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="TextView" />
+                </FrameLayout>
+
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="124dp">
+
+                    <TextView
+                        android:id="@+id/txt_matrizB_completo"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="TextView" />
+                </FrameLayout>
+
+                <TextView
+                    android:id="@+id/txt_matriz_resultado"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="TextView" />
+
+            </LinearLayout>
+
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="37dp"
+            android:layout_margin="30dp"
+            android:gravity="center">
+
+            <Button
+                android:id="@+id/btn_calcular_matriz"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Matriz A"
-                app:layout_constraintTop_toTopOf="@+id/editTextNumber"
-                tools:layout_editor_absoluteX="16dp" />
-        </androidx.constraintlayout.widget.ConstraintLayout>
-
-    </FrameLayout>
+                android:layout_height="50dp"
+                android:text="@string/btn_calcular" />
+        </TableRow>
+    </TableLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

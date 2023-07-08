@@ -18,7 +18,7 @@ import com.google.firebase.auth.FirebaseUser;
 public class Activity_Opciones extends AppCompatActivity {
     Button btn_op1;
     Button btn_op2;
-    Button btn_op3;
+    Button btn_op3, btn_op4;
 
     FirebaseAuth auth;
     Button cerrar_session;
@@ -74,6 +74,13 @@ public class Activity_Opciones extends AppCompatActivity {
         btn_op3.setOnClickListener(view ->{
             CambiarVentana(activity_razones_trig.class);
         });
+
+        //boton 3 cambio ventana- razones trigonometricas
+        btn_op4 =findViewById(R.id.btn_4);
+        btn_op4.setOnClickListener(view ->{
+            CambiarVentana(operaciones_matrices.class);
+        });
+
     }
     //Clase Padre
     //toolbar
