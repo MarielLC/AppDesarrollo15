@@ -103,7 +103,7 @@ public class operaciones_matrices extends AppCompatActivity {
             public void onClick(View v) {
                //llenamos nuestras matrices con los datos
 
-                if(i>numeroColumnasA && j>numeroFilasA && k>numeroColumnasB && l>numeroFilasB){
+                if(i>=numeroColumnasA && j>=numeroFilasA && k>=numeroColumnasB && l>=numeroFilasB){
                     guardarM.setVisibility(View.INVISIBLE);
                     String prueba="";
                     for (int m = 0; m < matrizA[0].length; m++) {
@@ -116,25 +116,46 @@ public class operaciones_matrices extends AppCompatActivity {
                     return;
                 }
 
-                if(i<=numeroFilasA || j<=numeroColumnasA && (k==0 && l==0) ){
+                if(i<=numeroFilasA || (j<=numeroColumnasA && k==0 && l==0) ){
                     if(j<=numeroColumnasA){
                         matrizA[i][j]=Double.parseDouble(datoM.getText().toString());
-                        Toast.makeText(operaciones_matrices.this, "ingresado"+i+" "+j, Toast.LENGTH_SHORT).show();
+                        Toast.makeText(operaciones_matrices.this, "ingresado"+i+" "+j+ " ++ "+numeroFilasA+" "+numeroColumnasA, Toast.LENGTH_SHORT).show();
                         datoM.setText("");
-                        j++;
-                    }else{
-                        i++;
-                        j=0;
+                       /* if(j==numeroColumnasA){
+                            i++;
+                            j=0;
+                        }
+                        if(j<numeroColumnasA){
+                            j++;
+                        }*/
+                        if (j == numeroColumnasA) {
+                            if (i == numeroFilasA) {
+                                // Matriz A está completa, pasar a la siguiente matriz
+                                i = 0;
+                                j = 0;
+                                k = 0;
+                                l = 0;
+                                return;
+                            } else {
+                                i++;
+                                j = 0;
+                            }
+                        } else {
+                            j++;
+                        }
+
+
                     }
                 }
-                if(k<=numeroFilasB && l<=numeroColumnasB && i==numeroFilasA && j==numeroColumnasA){
+                if(k<=numeroFilasB && l<=numeroColumnasB && (i==numeroFilasA && j==numeroColumnasA)){
 
                     if(l<=numeroColumnasB){
-                        matrizB[k][l]=Double.parseDouble(datoM.getText().toString());
-                        j++;
-                    }else{
-                        k++;
-                        j=0;
+                        //matrizB[k][l]=Double.parseDouble(datoM.getText().toString());
+                        l++;
+                        if(l==numeroColumnasB){
+                            k++;
+                            l=0;
+                        }
                     }
                 }
 
@@ -221,13 +242,13 @@ public class operaciones_matrices extends AppCompatActivity {
 
         switch (seleccion){
             case "suma":
-
+                resultadoM=calcularSumaMatrices(matrizA, matrizB);
                 break;
             case "resta":
-
+                resultadoM=calcularRestaMatrices(matrizA,matrizB);
                 break;
             case "multiplicacion":
-
+                resultadoM=calcularMultiplicacionMatrices();
                 break;
             case "division":
 
@@ -242,6 +263,85 @@ public class operaciones_matrices extends AppCompatActivity {
 
         return resultadoM;
     }
+
+    //metodo para calcular una suma de matrices las cuales matriz A y matriz B son de igual tamaño
+    public String calcularSumaMatrices(Double matriza[][], Double matrib[][]){
+        String resultadoSumaMatrices="";
+        Double auxiliarMatriz[][]=new Double[numeroFilasA][numeroColumnasA];
+
+        for (int x = 0; x < numeroFilasA; x++) {
+            resultadoSumaMatrices+="|";
+            for (int y = 0; y < numeroColumnasA; y++) {
+                auxiliarMatriz[x][y]=matrizA[x][y]+matrizB[x][y];
+                resultadoSumaMatrices+=auxiliarMatriz[x][y].toString();
+            }
+            resultadoSumaMatrices+="|";
+            resultadoSumaMatrices+="\n";
+        }
+        return resultadoSumaMatrices;
+    }
+
+    //metodo para calcular una resta de matrices las cuales matriz A y matriz B son de igul tamaño en filas y columnas
+
+    public String calcularRestaMatrices(Double matriza[][], Double matrizb[][]){
+        String resultadoRestaMatrices="";
+        Double auxiliarMatriz2[][] = new Double[numeroFilasA][numeroColumnasA];
+
+        for (int x = 0; x < numeroFilasA; x++) {
+            resultadoRestaMatrices+="|";
+            for (int y = 0; y < numeroColumnasA; y++) {
+                auxiliarMatriz2[x][y]=matrizA[x][y]+matrizB[x][y];
+                resultadoRestaMatrices+=auxiliarMatriz2[x][y].toString();
+            }
+            resultadoRestaMatrices+="|";
+            resultadoRestaMatrices+="\n";
+
+        }
+        return resultadoRestaMatrices;
+
+    }
+
+    //metodo para calcular la multiplicacion de matrices
+    public String calcularMultiplicacionMatrices(){
+        Double productoMatrices [][]=new Double[numeroColumnasA][numeroFilasB];
+        String resultado="";
+
+        if(numeroColumnasA==numeroFilasB) {
+
+            // Necesitamos hacer esto por cada columna de la segunda matriz (B)
+            for (int a = 0; a < matrizB[0].length; a++) {
+                // Dentro recorremos las filas de la primera (A)
+                for (int b = 0; b < matrizA.length; b++) {
+                    Double suma = 0.0;
+                    // Y cada columna de la primera (A)
+                    for (int c = 0; c < matrizA[0].length; c++) {
+                        // Multiplicamos y sumamos resultado
+                        suma += matrizA[b][c] * matrizB[c][a];
+                    }
+                    // Lo acomodamos dentro del producto
+                    productoMatrices[b][a] = suma;
+
+                }
+            }
+            for (int a = 0; a < numeroColumnasA; a++) {
+                resultado+="|";
+                for (int b = 0; b < numeroFilasB; b++) {
+                    resultado+=" "+ productoMatrices[a][b].toString();
+                }
+                resultado+="|";
+                resultado+="\n";
+            }
+
+        }
+
+        return resultado;
+    }
+    //falta metodo para conertir matriz resultado Double y matriz String
+
+    //metodo para calcular la division de matrices
+   // public  String calcularDivisionMatrices(){
+
+    //}
 
 
 }
