@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">AppDesarrollo</string>
+    <string name="app_name">Team Math</string>
     <string name="txt_titulo">Team Math</string>
     <string name="txt_bienvenida">BIENVENIDO</string>
     <string name="btn_ingreso">INGRESAR</string>

@@ -31,7 +31,7 @@ public class activity_razones_trig extends AppCompatActivity {
         setSupportActionBar(toolbar);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
-
+//
         ladoa= (EditText) findViewById(R.id.valorLadoA);
         ladob= (EditText) findViewById(R.id.valorLadoB);
         ladoc=(EditText) findViewById(R.id.valorLadoC);

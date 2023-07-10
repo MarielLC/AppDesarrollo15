@@ -3,6 +3,7 @@ package xyz.android.appdesarrollo;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.Toolbar;
 
 import android.content.Context;
 import android.content.DialogInterface;
@@ -36,6 +37,11 @@ public class operaciones_matrices extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_operaciones_matrices);
+
+        //toolbar retroceder
+        Toolbar toolbar = findViewById(R.id.toolbar8);
+        setSupportActionBar(toolbar);
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
         spinnerM=findViewById(R.id.spinner_matriz);
         guardarM=findViewById(R.id.btn_guardar_datoM);
@@ -172,6 +178,7 @@ public class operaciones_matrices extends AppCompatActivity {
 
 
     }
+
 
     @Override
     public boolean onOptionsItemSelected(@NonNull MenuItem item) {
