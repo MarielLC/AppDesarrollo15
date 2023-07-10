@@ -39,7 +39,7 @@ public class Activity_Opciones extends AppCompatActivity {
             startActivity(i);
             finish();
         }else {
-            textview.setText(user.getEmail());
+            textview.setText("Usuario: "+user.getEmail());
         }
 
         cerrar_session.setOnClickListener(new View.OnClickListener() {

@@ -50,12 +50,6 @@
                     android:gravity="center"
                     android:orientation="vertical">
 
-                    <Button
-                        android:id="@+id/close_session"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:text="@string/btn_cerrar_session" />
-
                     <TextView
                         android:id="@+id/textView4"
                         android:layout_width="match_parent"
@@ -148,6 +142,7 @@
                     app:cornerRadius="5dp"
                     app:strokeColor="@color/white"
                     app:strokeWidth="3dp" />
+
             </TableRow>
 
             <TableRow
@@ -185,6 +180,27 @@
                     app:cornerRadius="5dp"
                     app:strokeColor="@color/white"
                     app:strokeWidth="3dp" />
+
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="right|end">
+
+                <Button
+                    android:id="@+id/close_session"
+                    style="?attr/materialButtonOutlinedStyle"
+                    android:layout_width="218dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center|end"
+                    android:layout_marginRight="20dp"
+                    android:fontFamily="casual"
+                    android:text="@string/btn_cerrar_session"
+                    android:textColor="@color/white"
+                    android:textStyle="bold"
+                    app:icon="@drawable/cerrar"
+                    app:iconTint="@color/white" />
             </TableRow>
 
         </TableLayout>
